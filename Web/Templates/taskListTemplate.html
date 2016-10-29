@@ -1,0 +1,27 @@
+﻿<script type="text/ng-template" id="task_item_render.html">
+    <div class="{{task.ChildTasks && task.ChildTasks.length > 0 ? 'accordion-toggle collapsed' : ''}} tree-item {{currentTask.Id == task.Id? 'active' : ''}}" id="task_{{task.Id}}" data-toggle="collapse" data-parent="#accordion_{{task.Id}}" href="#collapse_{{task.Id}}" ng-click="onTaskClick()">
+        <span class="glyphicon"></span>
+        <label class="tree-toggle {{task.ChildTasks && task.ChildTasks.length > 0 ? 'task-header' : ''}}">{{task.Name}}</label>
+        <span class="badge">{{getTaskSpentTime(task)}}</span>
+    </div>
+
+    <div id="collapse_{{task.Id}}" class="collapse">
+        <ul id="accordion_{{task.Id}}">
+
+            <li ng-repeat="task in task.ChildTasks" ng-include="'task_item_render.html'">
+
+            </li>
+        </ul>
+    </div>
+
+</script>
+
+
+
+
+<div class="item-list-table well">
+    <ul class="nav task-list" id="accordion_{{tasks[0].Id}}">
+        <li ng-repeat="task in tasks" ng-include="'task_item_render.html'">
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,7 @@
+E:\Std\TimeManager\Data\bin\Debug\Data.dll
+E:\Std\TimeManager\Data\bin\Debug\Data.pdb
+E:\Std\TimeManager\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+E:\Std\TimeManager\Data\obj\Debug\Data.dll
+E:\Std\TimeManager\Data\obj\Debug\Data.pdb
+E:\Std\TimeManager\Data\bin\Debug\Newtonsoft.Json.dll
+E:\Std\TimeManager\Data\bin\Debug\Newtonsoft.Json.xml

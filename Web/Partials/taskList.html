@@ -1,0 +1,15 @@
+﻿<div class="col-md-6">
+    <div ng-include="listTemplate"></div>
+</div>
+<div class="col-md-1"></div>
+<div class="item-list-table col-md-5 well {{currentTask.Activities && (currentTask.Activities | dayIntervalFilter).length > 0 ? '' : 'hide'}}">
+    <ul class="nav task-list">
+        <li ng-repeat="activity in currentTask.Activities | dayIntervalFilter">
+            <div class="tree-item" id="activity_{{activity.Id}}">
+                <span class="glyphicon"></span>
+                <label class="tree-toggle">{{activity.Date | date: 'dd.MM.yyyy HH:mm'}}</label>
+                <span class="badge">{{activity.SpentTime}}</span>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,9 @@
+﻿<div class="top-menu">
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="{{currentTab == 'list' ? 'active' : ''}}" ng-click="currentTab = 'list';"><a href="#/tasks">Task list</a></li>
+        <li role="presentation" ng-class="currentTab == 'details' ? 'active' : '';" class="{{ !currentTask? 'disabled' : ''}}" ng-click="!currentTask ? null : currentTab = 'details';"><a ng-href="{{ !currentTask ? '' : '#/tasks/' + currentTask.Id}}">Task details</a></li>
+        <li role="presentation" ng-class="currentTab == 'activities' ? 'active' : '';" class="{{ !currentTask? 'disabled' : ''}}" ng-click="!currentTask ? null : currentTab = 'activities';"><a ng-href="{{ !currentTask ? '' : '#/tasks/' + currentTask.Id + '/activities'}}">Activities</a></li>
+    </ul>
+</div>
+
+<div ng-view></div> 

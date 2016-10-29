@@ -1,0 +1,13 @@
+E:\Std\TimeManager\BL\bin\Debug\BL.dll
+E:\Std\TimeManager\BL\bin\Debug\BL.pdb
+E:\Std\TimeManager\BL\bin\Debug\DAL.dll
+E:\Std\TimeManager\BL\bin\Debug\Data.dll
+E:\Std\TimeManager\BL\bin\Debug\EntityFramework.dll
+E:\Std\TimeManager\BL\bin\Debug\DAL.pdb
+E:\Std\TimeManager\BL\bin\Debug\Data.pdb
+E:\Std\TimeManager\BL\bin\Debug\EntityFramework.xml
+E:\Std\TimeManager\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+E:\Std\TimeManager\BL\obj\Debug\BL.dll
+E:\Std\TimeManager\BL\obj\Debug\BL.pdb
+E:\Std\TimeManager\BL\bin\Debug\Newtonsoft.Json.dll
+E:\Std\TimeManager\BL\bin\Debug\Newtonsoft.Json.xml

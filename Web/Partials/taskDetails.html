@@ -1,0 +1,65 @@
+﻿<form>
+    <div class="control-group">
+        <label class="control-label" for="Name">Name</label>
+        <div class="controls" style="width: 24%">
+            <input class="form-control" type="text" ng-model="task.Name" id="Name" ng-readonly="!isEdit"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="ParentTask">Parent task</label>
+        <div class="controls" style="width: 24%">
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="task.ParentTask.Name" id="ParentTask" readonly="readonly"/>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-disabled="!isEdit" ng-click="openParentTaskModal()">...</button>
+                </span>
+                
+            </div><!-- /input-group -->
+
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="Priority">Priority</label>
+        <div class="controls" style="width: 24%">
+            <input type="text" class="form-control" ng-model="task.Priority" id="Priority" ng-readonly="!isEdit"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="MeasureUnit">Measure Unit</label>
+        <div class="controls" style="width: 24%">
+            <input type="text" class="form-control" ng-model="task.MeasureUnit.Name" id="MeasureUnit" ng-readonly="!isEdit || !task.TrackAmount"/>
+        </div>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" id="TrackAmount" ng-model="task.TrackAmount" ng-disabled="!isEdit"> Track Amount
+        </label>
+    </div>
+    <div class="control-group">
+        <button class="btn btn-primary" ng-click="isEdit = true" ng-hide="isEdit">Edit</button>
+        <button class="btn btn-primary" ng-click="save()" ng-hide="!isEdit">Save</button>
+        <button class="btn btn-danger" ng-click="cancel()" ng-hide="!isEdit">Cancel</button>
+    </div>
+
+</form>
+
+<!-- Modal -->
+<div class="modal fade" id="parentTaskModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Parent task</h4>
+            </div>
+            <div class="modal-body">
+                <div class="list-content-modal">
+                    <div ng-include="listTemplate"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="onParentTaskModalSaveBtnClick()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
